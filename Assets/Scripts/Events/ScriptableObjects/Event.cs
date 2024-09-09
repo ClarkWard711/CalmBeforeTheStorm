@@ -12,7 +12,7 @@ public class Event : ScriptableObject
     public List<TextAndDuration> eventTextList;
     public int appearTime;
     public int timeCost;
-    public ChoiceConfig eventChoice;
+    public ChoiceConfig eventChoices;
     public TextAsset textFile;
 
     public class TextAndDuration
