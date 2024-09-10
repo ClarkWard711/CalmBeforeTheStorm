@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875e4d29dd6d94452945b71de10f689c, type: 3}
-  m_Name: InitialEvents_HelpTheElder
+  m_Script: {fileID: 11500000, guid: cc87dea97ed5e4926a54b12c6eb416fd, type: 3}
+  m_Name: EndConfig
   m_EditorClassIdentifier: 
-  isInitialEvent: 0
-  Icon: {fileID: 0}
-  eventDescription: 
-  appearTime: 0
-  timeCost: 0
-  eventChoices: {fileID: 0}
-  textFile: {fileID: 0}
+  choicesList: []

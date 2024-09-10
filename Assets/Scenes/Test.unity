@@ -501,8 +501,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 540}
-  m_SizeDelta: {x: 890.06946, y: 1080}
+  m_AnchoredPosition: {x: 0, y: 694.65}
+  m_SizeDelta: {x: 890.0695, y: 770.6897}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650665422
 MonoBehaviour:
@@ -809,6 +809,7 @@ MonoBehaviour:
   TexturePrefab: {fileID: 5685390064263429032, guid: 07b59b71dbac34f5cbfa1c299df92d69, type: 3}
   TexturePanel: {fileID: 0}
   ShowTextPanel: {fileID: 1560851293}
+  test: {fileID: 4900000, guid: 2ad47687eff5b496d9f669731c5e105c, type: 3}
   currentEvent: {fileID: 0}
 --- !u!1 &1778297158
 GameObject:
@@ -847,8 +848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1426.9653, y: -536.26}
-  m_SizeDelta: {x: 20, y: 1072.5}
+  m_AnchoredPosition: {x: 1426.9653, y: -385.35}
+  m_SizeDelta: {x: 20, y: 770.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1778297160
 MonoBehaviour:

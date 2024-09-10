@@ -6,23 +6,25 @@ using UnityEngine;
 
 public class Event : ScriptableObject
 {
-    public bool isInitialEvent;
-    public bool isEmergency;
-    public Sprite Icon;
-    public string eventDescription;
-    public List<TextAndDuration> eventTextList;
-    public int appearTime;
-    public int timeCost;
-    public ChoiceConfig eventChoices;
-    public TextAsset textFile;
-
+    [System.Serializable]
     public class TextAndDuration
     {
         public string text;
         public float duration = 0.1f;
     }
+    public bool isInitialEvent;
+    public bool isEmergency;
+    public Sprite Icon;
+    public string eventDescription;
+    [SerializeField] public List<TextAndDuration> eventTextList;
+    public List<TextAndDuration> EventTextList => eventTextList;
+    public int appearTime;
+    public int timeCost;
+    public ChoiceConfig eventChoices;
+    public TextAsset textFile;
 
-    public void OnEnable()
+
+    public void OnValidate()
     {
         if (!textFile) return;
         eventTextList.Clear();

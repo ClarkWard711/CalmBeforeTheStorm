@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45453bccee1384038ba1534a8aa2161b, type: 3}
-  m_Name: Choice_HelpTheElder-0-0
+  m_Name: Choice_HelpTheElder-0-1
   m_EditorClassIdentifier: 
-  description: 
-  affectCountList: 
+  description: Ignore him and go straight home.
+  affectCountList: 08000000fcffffff000000000000000008000000
   eventCallUp: {fileID: 0}
   costMoney: 0
