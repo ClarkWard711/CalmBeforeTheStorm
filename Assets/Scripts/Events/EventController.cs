@@ -79,4 +79,27 @@ public class EventController : MonoBehaviour
             }
         }
     }
+
+    [ContextMenu("Test")]
+    public void Test()
+    {
+        isTextFinished = true;
+        if (isTextFinished)
+        {
+            StartCoroutine(TestShowText());
+        }
+    }
+    IEnumerator TestShowText()
+    {
+        isTextFinished = false;
+        TexturePanel = Instantiate(TexturePrefab, ShowTextPanel.transform);
+        string temp = "TestTextFunction";
+        TexturePanel.GetComponent<Text>().text = null;
+        for (int i = 0; i < temp.Length; i++)
+        {
+            TexturePanel.GetComponent<Text>().text += temp[i];
+            yield return new WaitForSeconds(0.1f);
+        }
+        isTextFinished = true;
+    }
 }
