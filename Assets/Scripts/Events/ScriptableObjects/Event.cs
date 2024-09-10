@@ -7,6 +7,7 @@ using UnityEngine;
 public class Event : ScriptableObject
 {
     public bool isInitialEvent;
+    public bool isEmergency;
     public Sprite Icon;
     public string eventDescription;
     public List<TextAndDuration> eventTextList;

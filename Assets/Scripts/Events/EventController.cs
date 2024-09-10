@@ -8,6 +8,8 @@ public class EventController : MonoBehaviour
     public GameObject TexturePrefab;
     public GameObject TexturePanel;
     public GameObject ShowTextPanel;
+    public TextAsset test;
+    int testIndex = 0;
     int index = 0;
     bool isTextFinished = false;
     bool isReturnPressed;
@@ -93,7 +95,8 @@ public class EventController : MonoBehaviour
     {
         isTextFinished = false;
         TexturePanel = Instantiate(TexturePrefab, ShowTextPanel.transform);
-        string temp = "TestTextFunction";
+        var textInLines = test.text.Split('\n');
+        string temp = textInLines[testIndex];
         TexturePanel.GetComponent<Text>().text = null;
         for (int i = 0; i < temp.Length; i++)
         {
@@ -101,5 +104,6 @@ public class EventController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         isTextFinished = true;
+        testIndex++;
     }
 }
