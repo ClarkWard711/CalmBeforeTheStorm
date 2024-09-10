@@ -20,6 +20,7 @@ public class EventController : MonoBehaviour
             isReturnPressed = true;
         }
     }
+
     private void FixedUpdate()
     {
         if (isReturnPressed)
@@ -27,6 +28,7 @@ public class EventController : MonoBehaviour
             ShowAllText(currentEvent);
         }
     }
+
     IEnumerator ShowText(Event currentEvent)
     {
         isTextFinished = false;
