@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Choice : ScriptableObject
 {
+    [TextArea]
     public string description;
     public List<int> affectCountList;
     public Event eventCallUp;
