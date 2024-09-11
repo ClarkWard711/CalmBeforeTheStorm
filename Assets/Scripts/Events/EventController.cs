@@ -5,15 +5,32 @@ using UnityEngine.UI;
 
 public class EventController : MonoBehaviour
 {
+    public static EventController Instance;
+
+
     public GameObject TexturePrefab;
     public GameObject TexturePanel;
     public GameObject ShowTextPanel;
     public TextAsset test;
+    public GameObject ChoicePanel;
+    public Button[] ChoiceButtons;
     int testIndex = 0;
     int index = 0;
     bool isTextFinished = false;
     bool isReturnPressed;
-    public Event currentEvent;
+    public Event CurrentEvent;
+    public List<Event> EventsList;
+
+    private int Time = 0;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        ChoiceButtons = ChoicePanel.GetComponentsInChildren<Button>();
+    }
 
     private void Update()
     {
@@ -27,13 +44,15 @@ public class EventController : MonoBehaviour
     {
         if (isReturnPressed)
         {
-            ShowAllText(currentEvent);
+            ShowAllText(CurrentEvent);
         }
     }
 
-    IEnumerator ShowText(Event currentEvent)
+    public IEnumerator ShowText(Event currentEvent)
     {
         isTextFinished = false;
+        CurrentEvent = currentEvent;
+        Time += currentEvent.timeCost;
         TexturePanel = Instantiate(TexturePrefab, ShowTextPanel.transform);
         for (int i = 0; i < currentEvent.eventTextList[index].text.Length; i++) 
         {
@@ -52,14 +71,30 @@ public class EventController : MonoBehaviour
 
     public void ShowChoices(ChoiceConfig choiceConfig)
     {
+        if (choiceConfig == null)
+        {
+            EventCheck();
+            return;
+        }
         index = 0;
+        foreach(var Btn in ChoiceButtons)
+        {
+            Btn.GetComponent<Text>().text = null;
+            Btn.interactable = true;
+        }
+        for (int i = 0; i < CurrentEvent.eventChoices.choicesList.Count; i++) 
+        {
+            ChoiceButtons[i].GetComponent<Text>().text = CurrentEvent.eventChoices.choicesList[i].description;
+            ChoiceButtons[i].onClick.AddListener(CurrentEvent.eventChoices.choicesList[i].RaiseEvent);
+        }
     }
 
     public void ShowAllText(Event currentEvent)
     {
+        isReturnPressed = false;
         if (isTextFinished && index != currentEvent.eventTextList.Count) 
         {
-            ShowText(currentEvent);
+            StartCoroutine(ShowText(currentEvent));
         }
         else if (isTextFinished && index == currentEvent.eventTextList.Count)
         {
@@ -79,6 +114,22 @@ public class EventController : MonoBehaviour
             {
                 ShowChoices(currentEvent.eventChoices);
             }
+        }
+    }
+
+    public void EventCheck()
+    {
+        switch (Time)
+        {
+            case 0:
+                //另一个脚本写选择事件等方法
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
         }
     }
 
