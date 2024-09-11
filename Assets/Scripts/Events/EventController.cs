@@ -19,7 +19,6 @@ public class EventController : MonoBehaviour
     bool isTextFinished = false;
     bool isReturnPressed;
     public Event CurrentEvent;
-    public List<Event> EventsList;
 
     private int Time = 0;
 
