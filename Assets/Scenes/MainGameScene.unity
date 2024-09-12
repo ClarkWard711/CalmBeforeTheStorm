@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2714,7 +2714,9 @@ MonoBehaviour:
   test: {fileID: 4900000, guid: 2ad47687eff5b496d9f669731c5e105c, type: 3}
   ChoicePanel: {fileID: 291869836}
   ChoiceButtons: []
-  CurrentEvent: {fileID: 0}
+  isAllShown: 0
+  CurrentEvent: {fileID: 11400000, guid: 2c1a64beb923f4fdc8bce4b2586b1945, type: 2}
+  duration: 0.1
 --- !u!114 &527112893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3260,7 +3262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4720,7 +4722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5301,7 +5303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}

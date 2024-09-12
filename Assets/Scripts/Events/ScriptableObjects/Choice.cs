@@ -21,11 +21,8 @@ public class Choice : ScriptableObject
             return;
         }
         EventController.Instance.StartCoroutine(EventController.Instance.ShowText(eventCallUp));
-        CurrencyController.Instance.CostMoney(costMoney);
-        foreach (var Btn in EventController.Instance.ChoiceButtons)
-        {
-            Btn.GetComponent<Text>().text = null;
-            Btn.interactable = false;
-        }
+        EventController.Instance.ClearChoiceButtons();
+        //CurrencyController.Instance.CostMoney(costMoney);
+        EventController.Instance.isAllShown = false;
     }
 }
