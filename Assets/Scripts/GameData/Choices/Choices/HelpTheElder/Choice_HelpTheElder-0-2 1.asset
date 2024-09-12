@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45453bccee1384038ba1534a8aa2161b, type: 3}
-  m_Name: Choice_HelpTheElder-0-1
+  m_Name: Choice_HelpTheElder-0-2 1
   m_EditorClassIdentifier: 
-  description: Ignore and go home.
-  affectCountList: 08000000fcffffff000000000000000008000000
-  eventCallUp: {fileID: 11400000, guid: 95e792cd6113b4c1f9080240b6472ae4, type: 2}
+  description: Suspect and beat him.
+  affectCountList: fafffffffbffffff080000000400000000000000
+  eventCallUp: {fileID: 11400000, guid: 53f9bba2fb2a94c69a0bb41118ab959d, type: 2}
   costMoney: 0

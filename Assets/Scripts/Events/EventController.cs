@@ -33,7 +33,7 @@ public class EventController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyUp(KeyCode.Return))
         {
             isReturnPressed = true;
         }
@@ -53,6 +53,7 @@ public class EventController : MonoBehaviour
         CurrentEvent = currentEvent;
         Time += currentEvent.timeCost;
         TexturePanel = Instantiate(TexturePrefab, ShowTextPanel.transform);
+        TexturePanel.GetComponent<Text>().text = null;
         for (int i = 0; i < currentEvent.eventTextList[index].text.Length; i++) 
         {
             TexturePanel.GetComponent<Text>().text += currentEvent.eventTextList[index].text[i];
@@ -102,9 +103,11 @@ public class EventController : MonoBehaviour
         else
         {
             StopAllCoroutines();
-
-            TexturePanel.GetComponent<Text>().text = null;
-            TexturePanel.GetComponent<Text>().text = currentEvent.eventTextList[index].text;
+            if (TexturePanel != null)
+            {
+                TexturePanel.GetComponent<Text>().text = null;
+                TexturePanel.GetComponent<Text>().text = currentEvent.eventTextList[index].text;
+            }
 
             isTextFinished = true;
             index++;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45453bccee1384038ba1534a8aa2161b, type: 3}
   m_Name: Choice_HelpTheElder-0-0
   m_EditorClassIdentifier: 
-  description: Seeing the elderly as very pitiable, you decided to go help him.
+  description: Help him.
   affectCountList: fbffffff080000000000000000000000fbffffff
-  eventCallUp: {fileID: 0}
+  eventCallUp: {fileID: 11400000, guid: 5339a5986806841999772d54a8f7c825, type: 2}
   costMoney: 0

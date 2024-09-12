@@ -15,6 +15,11 @@ public class Choice : ScriptableObject
 
     public void RaiseEvent()
     {
+        if (eventCallUp == null)
+        {
+            //method
+            return;
+        }
         EventController.Instance.StartCoroutine(EventController.Instance.ShowText(eventCallUp));
         CurrencyController.Instance.CostMoney(costMoney);
         foreach (var Btn in EventController.Instance.ChoiceButtons)
