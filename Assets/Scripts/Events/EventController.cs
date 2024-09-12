@@ -77,6 +77,7 @@ public class EventController : MonoBehaviour
 
     public void ShowChoices(ChoiceConfig choiceConfig)
     {
+        //增加金钱判断
         if (choiceConfig == null)
         {
             EventCheck();
