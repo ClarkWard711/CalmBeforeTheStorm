@@ -2,24 +2,29 @@ using UnityEngine;
 
 public class PanelController : MonoBehaviour
 {
-    public GameObject panel;  // 拖入你要显示/隐藏的 Panel UI
+    public GameObject toDoPanel;
+    public GameObject eventPanel;
+    public GameObject callenderPanel;
 
-    void Start()
+    public void OpenToDo()
     {
-        // 开始时隐藏面板
-        panel.SetActive(false);
+        toDoPanel.SetActive(true);
+        eventPanel.SetActive(false);
+        callenderPanel.SetActive(false);
     }
 
-    // 可以在鼠标悬浮或点击按钮时调用这个方法来显示面板
-    public void ShowPanel()
+    public void OpenEvent()
     {
-        panel.SetActive(true);
+        toDoPanel.SetActive(false);
+        eventPanel.SetActive(true);
+        callenderPanel.SetActive(false);
     }
 
-    // 用来隐藏面板的方法
-    public void HidePanel()
+    public void OpenCallender()
     {
-        panel.SetActive(false);
+        toDoPanel.SetActive(false);
+        eventPanel.SetActive(false);
+        callenderPanel.SetActive(true);
     }
 }
 
