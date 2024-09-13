@@ -15,4 +15,4 @@ MonoBehaviour:
   description: Give him all your money.
   affectCountList: 0a00000000000000fafffffffafffffffaffffff
   eventCallUp: {fileID: 11400000, guid: 8ad8c20fe5c43469cb119591335a9375, type: 2}
-  costMoney: -1000
+  costMoney: -1

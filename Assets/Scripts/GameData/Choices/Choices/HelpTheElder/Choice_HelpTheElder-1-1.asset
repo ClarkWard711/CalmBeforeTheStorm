@@ -15,4 +15,4 @@ MonoBehaviour:
   description: Beat him.
   affectCountList: f8ffffff000000000a00000000000000f8ffffff
   eventCallUp: {fileID: 11400000, guid: 18e3c2e7eafb749088b6c375795f71fa, type: 2}
-  costMoney: -500
+  costMoney: 500

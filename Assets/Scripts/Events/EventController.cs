@@ -22,7 +22,7 @@ public class EventController : MonoBehaviour
     public Event CurrentEvent;
     public float duration = 0.1f;
 
-    private int Time = 0;
+    public int Time = 0;
 
     private void Awake()
     {
@@ -55,7 +55,10 @@ public class EventController : MonoBehaviour
     {
         isTextFinished = false;
         CurrentEvent = currentEvent;
-        Time += currentEvent.timeCost;
+        if (currentEvent.isInitialEvent)
+        {
+            Time += currentEvent.timeCost;
+        }
         TexturePanel = Instantiate(TexturePrefab, ShowTextPanel.transform);
         TexturePanel.GetComponent<Text>().text = null;
         duration = 0.1f;
@@ -77,12 +80,6 @@ public class EventController : MonoBehaviour
 
     public void ShowChoices(ChoiceConfig choiceConfig)
     {
-        //增加金钱判断
-        if (choiceConfig == null)
-        {
-            EventCheck();
-            return;
-        }
         index = 0;
         foreach(var Btn in ChoiceButtons)
         {
@@ -93,6 +90,10 @@ public class EventController : MonoBehaviour
         {
             ChoiceButtons[i].GetComponentInChildren<Text>().text = CurrentEvent.eventChoices.choicesList[i].description;
             ChoiceButtons[i].onClick.AddListener(CurrentEvent.eventChoices.choicesList[i].RaiseEvent);
+            if (CurrentEvent.eventChoices.choicesList[i].costMoney > CurrencyController.Instance.Money)
+            {
+                ChoiceButtons[i].interactable = false;
+            }
         }
     }
 
@@ -149,18 +150,7 @@ public class EventController : MonoBehaviour
 
     public void EventCheck()
     {
-        switch (Time)
-        {
-            case 0:
-                //另一个脚本写选择事件等方法
-            case 1:
-            case 2:
-                MainController.Instance.LoadEvent(Time);
-                break;
-            case 3:
-                ///Day end
-                break;
-        }
+        StartCoroutine(MainController.Instance.TimeChange(Time));
     }
 
     [ContextMenu("Test")]

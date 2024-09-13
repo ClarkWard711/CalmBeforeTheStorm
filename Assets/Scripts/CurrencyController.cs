@@ -24,7 +24,15 @@ public class CurrencyController : MonoBehaviour
     public void CostMoney(int amount)
     {
         if (amount == 0) return;
-        Money -= amount;
+        if (amount == -1)
+        {
+            Money -= Money;
+        }
+        else
+        {
+            Money -= amount;
+        }
+        
         //考虑做不做飘字
     }
 }

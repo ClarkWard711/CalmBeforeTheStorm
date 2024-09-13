@@ -17,12 +17,20 @@ public class Choice : ScriptableObject
     {
         if (eventCallUp == null)
         {
+            EventController.Instance.ClearChoiceButtons();
             EventController.Instance.EventCheck();
             return;
         }
         EventController.Instance.StartCoroutine(EventController.Instance.ShowText(eventCallUp));
         EventController.Instance.ClearChoiceButtons();
-        //CurrencyController.Instance.CostMoney(costMoney);
+
+        for (int i = 0; i < affectCountList.Count; i++)
+        {
+            PersonaController.Instance.personaAmountList[i] += affectCountList[i];
+        }
+        PersonaController.Instance.ChangeAmount();
+        CurrencyController.Instance.CostMoney(costMoney);
+        MainController.Instance.AmountChanged(affectCountList, costMoney);
         EventController.Instance.isAllShown = false;
     }
 }
