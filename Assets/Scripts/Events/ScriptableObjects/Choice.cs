@@ -17,7 +17,7 @@ public class Choice : ScriptableObject
     {
         if (eventCallUp == null)
         {
-            //method
+            EventController.Instance.EventCheck();
             return;
         }
         EventController.Instance.StartCoroutine(EventController.Instance.ShowText(eventCallUp));

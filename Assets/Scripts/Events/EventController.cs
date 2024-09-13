@@ -108,16 +108,17 @@ public class EventController : MonoBehaviour
     public void ShowAllText(Event currentEvent)
     {
         isReturnPressed = false;
-
-        if (!isTextFinished) 
+        if (currentEvent != null) 
         {
-            duration = 0f;
+            if (!isTextFinished)
+            {
+                duration = 0f;
+            }
+            else if (!isAllShown)
+            {
+                StartCoroutine(ShowText(currentEvent));
+            }
         }
-        else if (!isAllShown) 
-        {
-            StartCoroutine(ShowText(currentEvent));
-        }
-
 
         /*if (isTextFinished && !isAllShown)
         {
@@ -152,12 +153,12 @@ public class EventController : MonoBehaviour
         {
             case 0:
                 //另一个脚本写选择事件等方法
-                break;
             case 1:
-                break;
             case 2:
+                MainController.Instance.LoadEvent(Time);
                 break;
             case 3:
+                ///Day end
                 break;
         }
     }
