@@ -25,5 +25,5 @@ MonoBehaviour:
     duration: 0.1
   appearTime: 2
   timeCost: 1
-  eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
+  eventChoices: {fileID: 11400000, guid: bd4991c79e06d04438a0251b9327ee91, type: 2}
   textFile: {fileID: 4900000, guid: 9f400ecbe33f3db4ea32e7eca8461276, type: 3}
