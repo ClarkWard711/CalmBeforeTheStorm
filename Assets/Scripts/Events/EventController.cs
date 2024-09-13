@@ -15,10 +15,12 @@ public class EventController : MonoBehaviour
     public GameObject ChoicePanel;
     public Button[] ChoiceButtons;
     int testIndex = 0;
-    int index = 0;
+    int index = -1;
     bool isTextFinished = false;
     bool isReturnPressed;
+    public bool isAllShown = false;
     public Event CurrentEvent;
+    public float duration = 0.1f;
 
     private int Time = 0;
 
@@ -29,6 +31,8 @@ public class EventController : MonoBehaviour
             Instance = this;
         }
         ChoiceButtons = ChoicePanel.GetComponentsInChildren<Button>();
+        index = 0;
+        StartCoroutine(ShowText(CurrentEvent));
     }
 
     private void Update()
@@ -54,16 +58,18 @@ public class EventController : MonoBehaviour
         Time += currentEvent.timeCost;
         TexturePanel = Instantiate(TexturePrefab, ShowTextPanel.transform);
         TexturePanel.GetComponent<Text>().text = null;
+        duration = 0.1f;
         for (int i = 0; i < currentEvent.eventTextList[index].text.Length; i++) 
         {
             TexturePanel.GetComponent<Text>().text += currentEvent.eventTextList[index].text[i];
-            yield return new WaitForSeconds(currentEvent.eventTextList[index].duration);
+            yield return new WaitForSeconds(duration);
         }
         isTextFinished = true;
         index++;
         
         if (index == currentEvent.eventTextList.Count) 
         {
+            isAllShown = true;
             ShowChoices(currentEvent.eventChoices);
         }
 
@@ -71,6 +77,7 @@ public class EventController : MonoBehaviour
 
     public void ShowChoices(ChoiceConfig choiceConfig)
     {
+        //增加金钱判断
         if (choiceConfig == null)
         {
             EventCheck();
@@ -79,28 +86,48 @@ public class EventController : MonoBehaviour
         index = 0;
         foreach(var Btn in ChoiceButtons)
         {
-            Btn.GetComponent<Text>().text = null;
+            Btn.GetComponentInChildren<Text>().text = null;
             Btn.interactable = true;
         }
         for (int i = 0; i < CurrentEvent.eventChoices.choicesList.Count; i++) 
         {
-            ChoiceButtons[i].GetComponent<Text>().text = CurrentEvent.eventChoices.choicesList[i].description;
+            ChoiceButtons[i].GetComponentInChildren<Text>().text = CurrentEvent.eventChoices.choicesList[i].description;
             ChoiceButtons[i].onClick.AddListener(CurrentEvent.eventChoices.choicesList[i].RaiseEvent);
+        }
+    }
+
+    public void ClearChoiceButtons()
+    {
+        foreach (var Btn in ChoiceButtons)
+        {
+            Btn.onClick.RemoveAllListeners();
+            Btn.GetComponentInChildren<Text>().text = "-";
         }
     }
 
     public void ShowAllText(Event currentEvent)
     {
         isReturnPressed = false;
-        if (isTextFinished && index != currentEvent.eventTextList.Count) 
+
+        if (!isTextFinished) 
+        {
+            duration = 0f;
+        }
+        else if (!isAllShown) 
         {
             StartCoroutine(ShowText(currentEvent));
         }
-        else if (isTextFinished && index == currentEvent.eventTextList.Count)
+
+
+        /*if (isTextFinished && !isAllShown)
+        {
+            StartCoroutine(ShowText(currentEvent));
+        }
+        else if (isTextFinished && isAllShown)
         {
             return;
         }
-        else
+        else if (!isTextFinished) 
         {
             StopAllCoroutines();
             if (TexturePanel != null)
@@ -116,7 +143,7 @@ public class EventController : MonoBehaviour
             {
                 ShowChoices(currentEvent.eventChoices);
             }
-        }
+        }*/
     }
 
     public void EventCheck()

@@ -13,6 +13,7 @@ public class MainController : MonoBehaviour
 
     public void LoadEvent(int time)
     {
+        ///另设一个list 到时新游戏直接等于
         List<Event> EventsToBeLoad;
         EventsToBeLoad = EventsList.FindAll(evt => evt.appearTime == time);
         int index = Random.Range(0, EventsToBeLoad.Count);
