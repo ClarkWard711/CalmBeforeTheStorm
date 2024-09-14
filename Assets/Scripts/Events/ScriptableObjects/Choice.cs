@@ -29,13 +29,14 @@ public class Choice : ScriptableObject
             if (EventController.Instance.CurrentEvent.isJobEvent)
             {
                 float temp = Random.Range(0, 1f);
+                Debug.Log(temp);
                 if (temp <= EventController.Instance.possibility) 
                 {
-                    EventController.Instance.IsHiredList[EventController.Instance.tempID] = false;
+                    EventController.Instance.IsHiredList[EventController.Instance.tempID] = true;
                 }
                 else
                 {
-                    EventController.Instance.IsHiredList[EventController.Instance.tempID] = true;
+                    EventController.Instance.IsHiredList[EventController.Instance.tempID] = false;
                 }
             }
             EventController.Instance.ClearChoiceButtons();

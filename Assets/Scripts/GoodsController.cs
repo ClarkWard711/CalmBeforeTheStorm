@@ -74,18 +74,15 @@ public class GoodsController : MonoBehaviour
         PersonaController.Instance.ChangeAmount();
         MainController.Instance.AmountChanged(GoodAffectList, costMoney);
         haveBought = true;
+        buyButton.interactable = false;
     }
 
     public void ResetAffect()
     {
+        GoodAffectList.Clear();
         for (int i = 0; i < 5; i++)
         {
             GoodAffectList.Add(0);
         }
-    }
-
-    public void effect(int i)
-    {
-        
     }
 }

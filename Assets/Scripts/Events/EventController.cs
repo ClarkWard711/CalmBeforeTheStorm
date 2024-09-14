@@ -39,7 +39,6 @@ public class EventController : MonoBehaviour
         }
         ChoiceButtons = ChoicePanel.GetComponentsInChildren<Button>();
         index = 0;
-        Time = 1;
         //StartCoroutine(ShowText(CurrentEvent));
         IsHiredList.Clear();
         for (int i = 0; i < 10; i++)

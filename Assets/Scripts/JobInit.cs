@@ -39,6 +39,7 @@ public class JobInit : MonoBehaviour
             Content.transform.GetChild(i).gameObject.GetComponent<JobHolder>().JobName.text = JobNameList[i];
             Content.transform.GetChild(i).gameObject.GetComponent<JobHolder>().JobAvatar.sprite = JobAvatarList[i];
             Content.transform.GetChild(i).gameObject.GetComponent<JobHolder>().JobOREvent = true;
+            Content.transform.GetChild(i).gameObject.GetComponent<JobHolder>().jobEvent = JobEventsList[i];
         }
         
     }
