@@ -17,13 +17,13 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "That's much better......\r"
+  - text: That's much better......
     duration: 0.1
   - text: This is the only moment I feel truly alive.....
     duration: 0.1
   appearTime: 0
   timeCost: 0
-  eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
+  eventChoices: {fileID: 11400000, guid: 49d41461ebd634372aa138766c761b4a, type: 2}
   textFile: {fileID: 4900000, guid: 538e5f25dcc0da24db8d9bd2495496c3, type: 3}
   isJobEvent: 0
   possibility: 0.5

@@ -17,13 +17,13 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You get so high on bullying.\r"
+  - text: You get so high on bullying.
     duration: 0.1
   - text: You can't stop it.
     duration: 0.1
   appearTime: 0
   timeCost: 0
-  eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
+  eventChoices: {fileID: 11400000, guid: 95b2ed1fcd3604002bb124f6fa041dd0, type: 2}
   textFile: {fileID: 4900000, guid: 6fd64737dd165ad46942bc247fa483e6, type: 3}
   isJobEvent: 0
   possibility: 0.5

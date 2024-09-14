@@ -17,27 +17,26 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "\"What is the meaning of life?\r"
+  - text: '"What is the meaning of life?'
     duration: 0.1
-  - text: "Is it thrill seeking? Chasing fame and fortune?\r"
+  - text: Is it thrill seeking? Chasing fame and fortune?
     duration: 0.1
-  - text: "Maybe life itself has no meaning, at least I can't find it.\r"
+  - text: Maybe life itself has no meaning, at least I can't find it.
     duration: 0.1
-  - text: "Sometimes, I see people around me getting happy step by step.\r"
+  - text: Sometimes, I see people around me getting happy step by step.
     duration: 0.1
-  - text: "I felt genuinely anxious, but at the same time I wasn't interested in
-      anything.\r"
+  - text: I felt genuinely anxious, but at the same time I wasn't interested in anything.
     duration: 0.1
-  - text: "Instead of rotting away like this,\r"
+  - text: Instead of rotting away like this,
     duration: 0.1
-  - text: "I'd rather have something to stimulate myself\"\r"
+  - text: I'd rather have something to stimulate myself"
     duration: 0.1
-  - text: "\r"
+  - text: ' '
     duration: 0.1
   - text: You pick up a knife and point it at your wrist.....
     duration: 0.1
   appearTime: 1
-  timeCost: 1
+  timeCost: 0
   eventChoices: {fileID: 11400000, guid: 77e25840b3113f942819d278ad587aef, type: 2}
   textFile: {fileID: 4900000, guid: 760396a7aa29fbb43bc0839549ec8215, type: 3}
   isJobEvent: 0

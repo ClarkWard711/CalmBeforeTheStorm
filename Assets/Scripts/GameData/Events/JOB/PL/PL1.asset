@@ -17,14 +17,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You enter the interview room and the interviewer asks you questions.\r"
+  - text: You enter the interview room and the interviewer asks you questions.
     duration: 0.1
-  - text: "(1) If you give a subordinate an assignment but he doesn't finish it\r"
+  - text: (1) If you give a subordinate an assignment but he doesn't finish it
     duration: 0.1
   - text: You will
     duration: 0.1
   appearTime: 0
-  timeCost: 0
+  timeCost: 1
   eventChoices: {fileID: 11400000, guid: 16966338ce500024c93b2f3f445fc262, type: 2}
   textFile: {fileID: 4900000, guid: 12787a242bef39846ab08d64cc8eec31, type: 3}
   isJobEvent: 1

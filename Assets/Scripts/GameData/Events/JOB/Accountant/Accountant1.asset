@@ -17,14 +17,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You enter the interview room and the interviewer asks you questions.\r"
+  - text: You enter the interview room and the interviewer asks you questions.
     duration: 0.1
-  - text: "(1) What is the first thing you would do \r"
+  - text: '(1) What is the first thing you would do '
     duration: 0.1
   - text: if you realised that a part of your account was missing
     duration: 0.1
   appearTime: 0
-  timeCost: 0
+  timeCost: 1
   eventChoices: {fileID: 11400000, guid: bb9ae3fdde46f9c49883bac929dd6925, type: 2}
   textFile: {fileID: 4900000, guid: f9604b0b74cb6fd49a4d1e402ea2a27f, type: 3}
   isJobEvent: 1

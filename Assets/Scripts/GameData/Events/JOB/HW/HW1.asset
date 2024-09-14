@@ -17,14 +17,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You enter the interview room and the interviewer asks you questions.\r"
+  - text: You enter the interview room and the interviewer asks you questions.
     duration: 0.1
-  - text: "(1) If you meet an unreasonable customer\r"
+  - text: (1) If you meet an unreasonable customer
     duration: 0.1
   - text: You would choose to.
     duration: 0.1
   appearTime: 0
-  timeCost: 0
+  timeCost: 1
   eventChoices: {fileID: 11400000, guid: 7783ec4938946024da0f63de15b60e2c, type: 2}
   textFile: {fileID: 4900000, guid: b46ad3587d96488479b6337eb143f06d, type: 3}
   isJobEvent: 1

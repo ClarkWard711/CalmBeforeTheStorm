@@ -25,6 +25,13 @@ public class MainController : MonoBehaviour
     public Text DateText;
     public GameObject Shop;
     public ChoiceConfig ShopConfig;
+    public Image FinishBG;
+    public GameObject GoodPanel;
+    public List<Sprite> EndSprite;
+    public GameObject letter;
+    public GameObject pickText;
+    public List<Sprite> letterSprite;
+    public Event HazardEvent;
     private void Awake()
     {
         if (Instance == null)
@@ -195,14 +202,25 @@ public class MainController : MonoBehaviour
 
         if (PersonaCheck())
         {
-            StartCoroutine(TimeChange(EventController.Instance.Time));
+            if (date == 21)
+            {
+                if (!JobInit.Instance.finishList.Exists(t => t = true)) 
+                {
+                    End(false);
+                }
+                else
+                {
+                    End(true);
+                }
+            }
+            else
+            {
+                StartCoroutine(TimeChange(EventController.Instance.Time));
+            }
         }
         else
         {
-            if (date == 21) 
-            {
-
-            }
+            End(false);
         }
     }
 
@@ -230,5 +248,51 @@ public class MainController : MonoBehaviour
             EventController.Instance.ChoiceButtons[i].GetComponentInChildren<Text>().text =ShopConfig.choicesList[i].description;
             EventController.Instance.ChoiceButtons[i].onClick.AddListener(ShopConfig.choicesList[i].RaiseEvent);
         }
+    }
+
+    public void End(bool isGood)
+    {
+        if (isGood)
+        {
+            FinishBG.enabled = true;
+            FinishBG.sprite = EndSprite[0];
+            StartCoroutine(GoodEnd());
+        }
+        else
+        {
+            StartCoroutine(EventController.Instance.ShowText(HazardEvent));
+        }
+    }
+
+    public IEnumerator BadEnd()
+    {
+        FinishBG.enabled = true;
+        FinishBG.sprite = EndSprite[1];
+        StartCoroutine(ShowBGGuradually());
+        yield return new WaitUntil(() => isFadeFinish);
+        letter.SetActive(true);
+        letter.GetComponent<Image>().sprite = letterSprite[1];
+        letter.GetComponent<Text>().text = "When you read this note, I will have already left this world.\nI admit that my life here has been a complete mess.\nI once cut my wrists to escape from it all.\nI have lost my temper over trivial matters and hurt innocent bystanders.\nI have stolen countless times out of greed.\nI have been so picky that I made someone lose their family and happiness.\nI feel that I can no longer face myself honestly.\nSometimes I wonder if I am truly myself.\nPerhaps, I might just be a madman who shouldn’t exist in this world.";
+    }
+
+    public IEnumerator GoodEnd()
+    {
+        StartCoroutine(ShowBGGuradually());
+        yield return new WaitUntil(() => isFadeFinish);
+        GoodPanel.SetActive(true);
+        pickText.SetActive(true);
+        letter.GetComponent<Image>().sprite = letterSprite[0];
+        JobInit.Instance.PickJob();
+    }
+
+    public IEnumerator ShowBGGuradually()
+    {
+        isFadeFinish = false;
+        for (float i = 1; i > 0; i -= 0.1f)
+        {
+            FinishBG.color = new Color(1, 1, 1, i);
+            yield return new WaitForSeconds(0.1f);
+        }
+        isFadeFinish = true;
     }
 }

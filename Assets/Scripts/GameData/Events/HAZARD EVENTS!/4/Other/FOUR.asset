@@ -17,13 +17,13 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "But you know in your heart\r"
+  - text: But you know in your heart
     duration: 0.1
   - text: There's never a last time for this
     duration: 0.1
   appearTime: 0
   timeCost: 0
-  eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
+  eventChoices: {fileID: 11400000, guid: 48040185ae37b47b7a4623782781a6c2, type: 2}
   textFile: {fileID: 4900000, guid: a272a9a4584cf744ab120b5f6600cdab, type: 3}
   isJobEvent: 0
   possibility: 0.5

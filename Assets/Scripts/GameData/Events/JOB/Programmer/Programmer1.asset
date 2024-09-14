@@ -17,15 +17,15 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You enter the interview room and the interviewer asks you questions.\r"
+  - text: You enter the interview room and the interviewer asks you questions.
     duration: 0.1
-  - text: "(1) If you were left with a new task by your team leader moments before
-      the end of your shift.\r"
+  - text: (1) If you were left with a new task by your team leader moments before
+      the end of your shift.
     duration: 0.1
   - text: You would choose to.
     duration: 0.1
   appearTime: 0
-  timeCost: 0
+  timeCost: 1
   eventChoices: {fileID: 11400000, guid: d2d47c304ba8b3b4bb5c49433cded168, type: 2}
   textFile: {fileID: 4900000, guid: 27cd2b4605b092d44875f16f0053dc27, type: 3}
   isJobEvent: 1

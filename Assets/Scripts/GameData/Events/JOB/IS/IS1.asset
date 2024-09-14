@@ -17,14 +17,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You enter the interview room and the interviewer asks you questions.\r"
+  - text: You enter the interview room and the interviewer asks you questions.
     duration: 0.1
-  - text: "(1) If I asked you to market a life insurance policy\r"
+  - text: (1) If I asked you to market a life insurance policy
     duration: 0.1
   - text: Which person would you recommend it
     duration: 0.1
   appearTime: 0
-  timeCost: 0
+  timeCost: 1
   eventChoices: {fileID: 11400000, guid: f7cc6b914c723ee4ca5f9cc57438adf1, type: 2}
   textFile: {fileID: 4900000, guid: ea122e425e50d404a877c932fdc94f4f, type: 3}
   isJobEvent: 1

@@ -17,14 +17,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You enter the interview room and the interviewer asks you questions.\r"
+  - text: You enter the interview room and the interviewer asks you questions.
     duration: 0.1
-  - text: "(1) Your food is suspected of being underweight\r"
+  - text: (1) Your food is suspected of being underweight
     duration: 0.1
   - text: You will.
     duration: 0.1
   appearTime: 0
-  timeCost: 0
+  timeCost: 1
   eventChoices: {fileID: 11400000, guid: 2a0728fe1eaa7f248b495d8b0fc058ae, type: 2}
   textFile: {fileID: 4900000, guid: 5abc1ca8702297f49a53af2faa65a1ac, type: 3}
   isJobEvent: 1

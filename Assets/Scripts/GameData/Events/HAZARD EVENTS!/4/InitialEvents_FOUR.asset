@@ -17,21 +17,21 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You carefully place the gem necklace on the empty space of the cabinet,
+  - text: You carefully place the gem necklace on the empty space of the cabinet,
       looking at the cabinet full of trophies, you have an indescribable sense of
-      achievement.\r"
+      achievement.
     duration: 0.1
-  - text: "You don't know when you realized you liked easy stuff.\r"
+  - text: You don't know when you realized you liked easy stuff.
     duration: 0.1
-  - text: "It starts with little things, and eventually your appetite gets bigger
-      and bigger.\r"
+  - text: It starts with little things, and eventually your appetite gets bigger
+      and bigger.
     duration: 0.1
-  - text: "You have always done whatever you wanted as if it were yours.\r"
+  - text: You have always done whatever you wanted as if it were yours.
     duration: 0.1
   - text: Every time you take something, you're thinking.....
     duration: 0.1
   appearTime: 1
-  timeCost: 1
+  timeCost: 0
   eventChoices: {fileID: 11400000, guid: b9cbeb52c50f2a74cb59dc89869aab6c, type: 2}
   textFile: {fileID: 4900000, guid: cecdc30f78cc50d469fb5a259cdd1e04, type: 3}
   isJobEvent: 0

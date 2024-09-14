@@ -17,15 +17,15 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You enter the interview room and the interviewer asks you questions.\r"
+  - text: You enter the interview room and the interviewer asks you questions.
     duration: 0.1
-  - text: "(1) If you propose a program that the executive Department does not think
-      can be completed at this stage\r"
+  - text: (1) If you propose a program that the executive Department does not think
+      can be completed at this stage
     duration: 0.1
   - text: You will.
     duration: 0.1
   appearTime: 0
-  timeCost: 0
+  timeCost: 1
   eventChoices: {fileID: 11400000, guid: bfb9120cba29d184581a93ce9092b2e8, type: 2}
   textFile: {fileID: 4900000, guid: 3d811b41661b0b8418257ed5c9023cb8, type: 3}
   isJobEvent: 1

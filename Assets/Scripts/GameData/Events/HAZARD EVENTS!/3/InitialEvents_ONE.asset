@@ -17,27 +17,26 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "This afternoon, a woman got into a fight with a couple over a parking
-      space.\r"
+  - text: This afternoon, a woman got into a fight with a couple over a parking space.
     duration: 0.1
-  - text: "CCTV footage showed the woman attacking the couple several times with
-      a knife, after both were seriously injured.\r"
+  - text: CCTV footage showed the woman attacking the couple several times with a
+      knife, after both were seriously injured.
     duration: 0.1
-  - text: "The woman fled in the car and the couple were not fatally injured, but
+  - text: The woman fled in the car and the couple were not fatally injured, but
       police are still investigating the incident and believe the killer will be
-      found soon\r"
+      found soon
     duration: 0.1
-  - text: "\r"
+  - text: ' '
     duration: 0.1
-  - text: "You listen to the reports on TV and bite your nails impatiently.\r"
+  - text: You listen to the reports on TV and bite your nails impatiently.
     duration: 0.1
-  - text: "You should have stabbed those two to death, and you regretted it for a
-      moment.\r"
+  - text: You should have stabbed those two to death, and you regretted it for a
+      moment.
     duration: 0.1
   - text: You picked up your defensive stick, and you pointed it to the broken TV.....
     duration: 0.1
   appearTime: 1
-  timeCost: 1
+  timeCost: 0
   eventChoices: {fileID: 11400000, guid: a0e3a41615f707c49acd2f490057d819, type: 2}
   textFile: {fileID: 4900000, guid: d325d73862e18c44faa279857a46804a, type: 3}
   isJobEvent: 0

@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class JobInit : MonoBehaviour
 {
+    public static JobInit Instance;
     public List<bool> finishList;
     public List<string> JobNameList;
     public GameObject Content;
     public GameObject jobPrefab;
+    public GameObject PickPanel;
+    public GameObject jobPickPrefab;
     public List<Sprite> JobAvatarList;
     public EventsConfig AllJobEvent;
     public List<Event> JobEventsList;
     private void Awake()
     {
+        if (Instance == null) 
+        {
+            Instance = this;
+        }
         finishList.Clear();
         for (int i = 0; i < 10; i++)
         {
@@ -41,6 +48,18 @@ public class JobInit : MonoBehaviour
             Content.transform.GetChild(i).gameObject.GetComponent<JobHolder>().JobOREvent = true;
             Content.transform.GetChild(i).gameObject.GetComponent<JobHolder>().jobEvent = JobEventsList[i];
         }
-        
+    }
+
+    public void PickJob()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            if (finishList[i]) 
+            {
+                var temp = Instantiate(jobPickPrefab, PickPanel.transform);
+                temp.GetComponent<JobHolder>().JobName.text = JobNameList[i];
+                temp.GetComponent<JobHolder>().JobAvatar.sprite = JobAvatarList[i];
+            }
+        }
     }
 }

@@ -17,13 +17,13 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You swear, sooner or later.\r"
+  - text: You swear, sooner or later.
     duration: 0.1
   - text: You're gonna make these people pay the price.
     duration: 0.1
   appearTime: 0
   timeCost: 0
-  eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
+  eventChoices: {fileID: 11400000, guid: 8a43c2860536848b5a5b36679c8c09c6, type: 2}
   textFile: {fileID: 4900000, guid: 549d655007988b34caba27b4e2339607, type: 3}
   isJobEvent: 0
   possibility: 0.5

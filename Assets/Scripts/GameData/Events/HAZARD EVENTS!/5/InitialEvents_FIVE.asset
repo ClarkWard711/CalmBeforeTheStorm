@@ -17,23 +17,23 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You want to torture people for fun.\r"
+  - text: You want to torture people for fun.
     duration: 0.1
-  - text: "There's nothing you love more than picking on people in various service
-      Settings.\r"
+  - text: There's nothing you love more than picking on people in various service
+      Settings.
     duration: 0.1
-  - text: "One day, as usual, you pick a fight with a restaurant chef\r"
+  - text: One day, as usual, you pick a fight with a restaurant chef
     duration: 0.1
-  - text: "And right in front of you, the chef was fired\r"
+  - text: And right in front of you, the chef was fired
     duration: 0.1
-  - text: "It's tempting to think that you're giving them a chance to sharpen themselves.\r"
+  - text: It's tempting to think that you're giving them a chance to sharpen themselves.
     duration: 0.1
-  - text: "Even if you later learn that the chef lost his job and ended up destitute.\r"
+  - text: Even if you later learn that the chef lost his job and ended up destitute.
     duration: 0.1
   - text: You still think.....
     duration: 0.1
   appearTime: 1
-  timeCost: 1
+  timeCost: 0
   eventChoices: {fileID: 11400000, guid: 577c5a4656817454db8b3bcb75b8ffbb, type: 2}
   textFile: {fileID: 4900000, guid: 02fd3d35890528c469b156636d58a3d4, type: 3}
   isJobEvent: 0

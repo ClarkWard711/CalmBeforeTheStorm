@@ -11,7 +11,6 @@ public class JobHolder : MonoBehaviour
     public Button AcceptButton;
     public bool JobOREvent;
 
-
     public void LoadEvent()
     {
         if (MainController.Instance.isJob)
@@ -56,5 +55,37 @@ public class JobHolder : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Pick()
+    {
+        MainController.Instance.GoodPanel.SetActive(false);
+        MainController.Instance.pickText.SetActive(false);
+        MainController.Instance.letter.SetActive(true);
+        string FinalName = "-";
+        switch (JobName.text)
+        {
+            case ("Programmer"):
+            case ("Accountant"):
+                FinalName = "Cathy";
+                break;
+            case ("Hotel Waiter"):
+            case ("Customer Service"):
+                FinalName = "Barbara";
+                break;
+            case ("Insurance Salesman"):
+            case ("Teacher"):
+                FinalName = "Dorothy";
+                break;
+            case ("Human Resource"):
+            case ("Project Leader"):
+                FinalName = "Edith";
+                break;
+            case ("Product Planner"):
+            case ("Head Chef"):
+                FinalName = "Florence";
+                break;
+        }
+        MainController.Instance.letter.GetComponentInChildren<Text>().text = "You wake up from bed as usual.\n\nYou’ve found a job that suits you and gained a group of like-minded friends.\n\nYou feel as though you’ve lost something, but those lost parts have shaped the life you have now.\n" + FinalName + " , you think that's yout name.\nThere’s nothing left to worry about. Now, you just want to live happily here.";
     }
 }
