@@ -41,6 +41,7 @@ public class JobHolder : MonoBehaviour
             else
             {
                 EventController.Instance.CurrentEvent = jobEvent;
+                MainController.Instance.GameEventsList.EventsList.Remove(jobEvent);
                 EventController.Instance.StartCoroutine(EventController.Instance.ShowText(EventController.Instance.CurrentEvent));
                 MainController.Instance.TipText.text = null;
                 EventController.Instance.WrongTip.text = null;

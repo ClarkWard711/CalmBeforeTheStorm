@@ -30,8 +30,12 @@ public class MainController : MonoBehaviour
             Instance = this;
         }
         GameEventsList.EventsList.Clear();
+
+        for (int i = 0; i < AllInitialEventsList.EventsList.Count; i++)
+        {
+            GameEventsList.EventsList.Add(AllInitialEventsList.EventsList[i]);
+        }
         
-        GameEventsList = AllInitialEventsList;
         amountChanged.Clear();
 
         for (int i = 0; i < 6; i++)

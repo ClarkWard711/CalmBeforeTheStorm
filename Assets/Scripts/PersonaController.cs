@@ -37,7 +37,7 @@ public class PersonaController : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            PersonaList[i].GetComponent<Persona>().blank.fillAmount = Mathf.Max(0f, personaAmountList[PersonaList[i].GetComponent<Persona>().id] / 100);
+            PersonaList[i].GetComponent<Persona>().blank.fillAmount = Mathf.Max(0f, personaAmountList[PersonaList[i].GetComponent<Persona>().id] / 100f);
             //Debug.Log(personaAmountList[PersonaList[i].GetComponent<Persona>().id] / 100f);
         }
     }
