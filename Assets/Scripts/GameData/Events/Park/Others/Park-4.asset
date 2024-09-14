@@ -27,3 +27,6 @@ MonoBehaviour:
   timeCost: 0
   eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
   textFile: {fileID: 4900000, guid: 73a85f13e7058454bacaa4b83090ce96, type: 3}
+  isJobEvent: 0
+  possibility: 0.5
+  jobID: -1

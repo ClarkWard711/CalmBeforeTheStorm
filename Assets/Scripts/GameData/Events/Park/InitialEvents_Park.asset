@@ -17,14 +17,17 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: Go to park
   eventTextList:
-  - text: "You're going to take a walk in the park in the morning.\r"
+  - text: "You're going to take a walk in the park in the afternoon.\r"
     duration: 0.1
   - text: "In the park you find a bird's nest and the mother bird is feeding her
       babies.\r"
     duration: 0.1
   - text: You decide.
     duration: 0.1
-  appearTime: 0
+  appearTime: 1
   timeCost: 1
   eventChoices: {fileID: 11400000, guid: 7450b7e151cfc374f80237068d9df596, type: 2}
   textFile: {fileID: 4900000, guid: e5dd8f5f3859dbf498d795737c71fe93, type: 3}
+  isJobEvent: 0
+  possibility: 0.5
+  jobID: -1
