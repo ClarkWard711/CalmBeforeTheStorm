@@ -23,6 +23,8 @@ public class MainController : MonoBehaviour
     public List<int> amountChanged;
     public int date = 11;
     public Text DateText;
+    public GameObject Shop;
+    public ChoiceConfig ShopConfig;
     private void Awake()
     {
         if (Instance == null)
@@ -154,6 +156,7 @@ public class MainController : MonoBehaviour
                 ChangePeriodIcon(time);
                 StartCoroutine(FadeBG(2));
                 //Shop and Day end
+                ShowShop();
                 yield break;
         }
         
@@ -187,6 +190,45 @@ public class MainController : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             amountChanged[i] = 0;
+        }
+        PersonaController.Instance.DailyChange();
+
+        if (PersonaCheck())
+        {
+            StartCoroutine(TimeChange(EventController.Instance.Time));
+        }
+        else
+        {
+            if (date == 21) 
+            {
+
+            }
+        }
+    }
+
+    public bool PersonaCheck()
+    {
+        if (PersonaController.Instance.personaAmountList.Exists(amount => amount <= 10 || amount >= 90)) 
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void ShowShop()
+    {
+        foreach (var Btn in EventController.Instance.ChoiceButtons)
+        {
+            Btn.GetComponentInChildren<Text>().text = null;
+            Btn.interactable = true;
+        }
+        for (int i = 0; i < ShopConfig.choicesList.Count; i++) 
+        {
+            EventController.Instance.ChoiceButtons[i].GetComponentInChildren<Text>().text =ShopConfig.choicesList[i].description;
+            EventController.Instance.ChoiceButtons[i].onClick.AddListener(ShopConfig.choicesList[i].RaiseEvent);
         }
     }
 }

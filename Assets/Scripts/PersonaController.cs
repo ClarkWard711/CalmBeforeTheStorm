@@ -49,5 +49,23 @@ public class PersonaController : MonoBehaviour
             PersonaList[i].GetComponent<Persona>().back.sprite = PersonaSprites[PersonaList[i].GetComponent<Persona>().id];
             PersonaList[i].GetComponent<Persona>().blank.sprite = PersonaSprites[PersonaList[i].GetComponent<Persona>().id];
         }
+        //change description
+    }
+
+    public void DailyChange()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (PersonaList[i].GetComponent<Persona>().id != 4) 
+            {
+                PersonaList[i].GetComponent<Persona>().id++;
+            }
+            else
+            {
+                PersonaList[i].GetComponent<Persona>().id = 0;
+            }
+        }
+        ChangeAmount();
+        ChangeAvatar();
     }
 }

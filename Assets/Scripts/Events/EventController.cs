@@ -176,15 +176,7 @@ public class EventController : MonoBehaviour
 
     public void EventCheck()
     {
-        if (PersonaController.Instance.personaAmountList.Exists(amount => amount <= 10)) 
-        {
-
-        }
-        else
-        {
-            StartCoroutine(MainController.Instance.TimeChange(Time));
-        }
-        
+        StartCoroutine(MainController.Instance.TimeChange(Time));
     }
 
     public void CleanAllText()

@@ -18,6 +18,12 @@ public class Choice : ScriptableObject
     public void RaiseEvent()
     {
         EventController.Instance.Tip.text = null;
+        if (description == "Shop.") 
+        {
+            MainController.Instance.Shop.SetActive(true);
+            EventController.Instance.ClearChoiceButtons();
+            return;
+        }
         if (eventCallUp == null)
         {
             if (EventController.Instance.CurrentEvent.isJobEvent)
