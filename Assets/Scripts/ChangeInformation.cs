@@ -27,7 +27,7 @@ public class ChangeInformation : MonoBehaviour
                 DateController.Instance.changesText[i].text = changes[i].ToString();
             }
         }
-        if (changes[5] != 0) 
+        if (changes[5] > 0) 
         {
             DateController.Instance.changesText[5].text = "-" + changes[5].ToString();
         }

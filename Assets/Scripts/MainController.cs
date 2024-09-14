@@ -16,6 +16,8 @@ public class MainController : MonoBehaviour
     public Image BackImage;
     public Sprite[] BGSprites;
     public bool isFadeFinish = false;
+    public bool isEvent;
+    public bool isJob;
     //public List<Event> InitialEventsList;
     //public List<Event> EmergencyEventsList;
     public List<int> amountChanged;
@@ -51,6 +53,7 @@ public class MainController : MonoBehaviour
         int index = Random.Range(0, EventsToBeLoad.Count);
         if (!EventsToBeLoad[index].isEmergency)
         {
+            PanelController.Instance.OpenEvent();
             var EventToBeChoose = EventsToBeLoad.FindAll(evt => !evt.isEmergency);
 
             for (int i = 0; i < 3; i++)
@@ -63,7 +66,8 @@ public class MainController : MonoBehaviour
                 var tempEvent = EventToBeChoose[randomIndex];
                 EventToBeChoose.RemoveAt(randomIndex);
                 var EventDialog = Instantiate(EventDialogPrefab, ChooseEventPanel.transform);
-
+                EventDialog.GetComponent<JobHolder>().JobName.text = tempEvent.eventDescription;
+                EventDialog.GetComponent<JobHolder>().jobEvent = tempEvent;
                 //将事件信息输入进去 并且显示 请选择事件
 
             }
@@ -111,22 +115,37 @@ public class MainController : MonoBehaviour
         switch (time)
         {
             case 0:
-                TipText.text = "Now, start your day!";
+                EventController.Instance.CleanAllText();
+                TipText.text = "Another day, it's time for interview now.";
+                isJob = true;
+                isEvent = false;
                 ChangePeriodIcon(time);
+                PanelController.Instance.OpenToDo();
                 StartCoroutine(FadeBG(time));
-                break;
+                yield break;
             case 1:
+                EventController.Instance.CleanAllText();
                 TipText.text = "It,s afternoon now!";
+                isJob = false;
+                isEvent = true;
                 ChangePeriodIcon(time);
+                PanelController.Instance.OpenEvent();
                 StartCoroutine(FadeBG(time));
                 break;
             case 2:
+                EventController.Instance.CleanAllText();
                 TipText.text = "It's evening now!";
+                isJob = false;
+                isEvent = true;
                 ChangePeriodIcon(time);
+                PanelController.Instance.OpenEvent();
                 StartCoroutine(FadeBG(time));
                 break;
             case 3:
+                EventController.Instance.CleanAllText();
                 TipText.text = "It's late night now, buy something and then have a rest!";
+                isJob = false;
+                isEvent = true;
                 ChangePeriodIcon(time);
                 StartCoroutine(FadeBG(2));
                 //Shop and Day end
@@ -135,7 +154,7 @@ public class MainController : MonoBehaviour
         
         yield return new WaitUntil(() => isFadeFinish);
         //yield return new WaitForSeconds(0.5f);
-        //LoadEvent(time);
+        LoadEvent(time);
     }
 
     public void AmountChanged(List<int> list, int money)
@@ -146,7 +165,7 @@ public class MainController : MonoBehaviour
         }
         amountChanged[5] += money;
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {
             DateController.Instance.Days[date + 3].GetComponent<ChangeInformation>().changes[i] = amountChanged[i];
         }

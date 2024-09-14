@@ -10,9 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79687f2886c0340a0b284f180c3c0f65, type: 3}
-  m_Name: NewGameEventsConfig
+  m_Name: AllJobEvent
   m_EditorClassIdentifier: 
-  EventsList:
-  - {fileID: 11400000, guid: 2c1a64beb923f4fdc8bce4b2586b1945, type: 2}
-  - {fileID: 11400000, guid: 33bad9bb1e0f4bd42ab7e435e7e46cd2, type: 2}
-  - {fileID: 11400000, guid: 26f4f812fb4d34c4592d90d97bd0531a, type: 2}
+  EventsList: []

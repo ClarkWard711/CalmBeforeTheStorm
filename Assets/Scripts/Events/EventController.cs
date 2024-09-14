@@ -27,6 +27,10 @@ public class EventController : MonoBehaviour
     public float possibility = 0.5f;
     public List<bool> IsHiredList;
     public int tempID;
+
+    public Text Tip;
+    public Text WrongTip;
+
     private void Awake()
     {
         if (Instance == null)
@@ -35,7 +39,8 @@ public class EventController : MonoBehaviour
         }
         ChoiceButtons = ChoicePanel.GetComponentsInChildren<Button>();
         index = 0;
-        StartCoroutine(ShowText(CurrentEvent));
+        Time = 1;
+        //StartCoroutine(ShowText(CurrentEvent));
         IsHiredList.Clear();
         for (int i = 0; i < 10; i++)
         {
@@ -63,11 +68,11 @@ public class EventController : MonoBehaviour
     {
         isTextFinished = false;
         CurrentEvent = currentEvent;
-
-        if (PanelController.Instance!=null)
+        Tip.text = "Press Return to continue...";
+        /*if (PanelController.Instance != null) 
         {
             PanelController.Instance.OpenCallender();
-        }
+        }*/
 
         if (currentEvent.isInitialEvent && index == 0 && currentEvent.isJobEvent) 
         {
@@ -93,6 +98,7 @@ public class EventController : MonoBehaviour
         if (index == currentEvent.eventTextList.Count) 
         {
             isAllShown = true;
+            Tip.text = "Make your choice...";
             ShowChoices(currentEvent.eventChoices);
         }
 
@@ -170,7 +176,26 @@ public class EventController : MonoBehaviour
 
     public void EventCheck()
     {
-        StartCoroutine(MainController.Instance.TimeChange(Time));
+        if (PersonaController.Instance.personaAmountList.Exists(amount => amount <= 10)) 
+        {
+
+        }
+        else
+        {
+            StartCoroutine(MainController.Instance.TimeChange(Time));
+        }
+        
+    }
+
+    public void CleanAllText()
+    {
+        if (ShowTextPanel.transform.childCount>0)
+        {
+            for (int i = 0; i < ShowTextPanel.transform.childCount; i++)
+            {
+                Destroy(ShowTextPanel.transform.GetChild(i).gameObject);
+            }
+        }
     }
 
     [ContextMenu("Test")]

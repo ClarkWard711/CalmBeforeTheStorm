@@ -17,6 +17,7 @@ public class Choice : ScriptableObject
 
     public void RaiseEvent()
     {
+        EventController.Instance.Tip.text = null;
         if (eventCallUp == null)
         {
             if (EventController.Instance.CurrentEvent.isJobEvent)
@@ -26,9 +27,15 @@ public class Choice : ScriptableObject
                 {
                     EventController.Instance.IsHiredList[EventController.Instance.tempID] = false;
                 }
+                else
+                {
+                    EventController.Instance.IsHiredList[EventController.Instance.tempID] = true;
+                }
             }
             EventController.Instance.ClearChoiceButtons();
             EventController.Instance.EventCheck();
+            EventController.Instance.isAllShown = false;
+            EventController.Instance.CurrentEvent = null;
             return;
         }
 
