@@ -13,24 +13,43 @@ public class Choice : ScriptableObject
     public Event eventCallUp;
     public int costMoney;
 
+    public float percentage;
+
     public void RaiseEvent()
     {
         if (eventCallUp == null)
         {
+            if (EventController.Instance.CurrentEvent.isJobEvent)
+            {
+                float temp = Random.Range(0, 1f);
+                if (temp <= EventController.Instance.possibility) 
+                {
+                    EventController.Instance.IsHiredList[EventController.Instance.tempID] = false;
+                }
+            }
             EventController.Instance.ClearChoiceButtons();
             EventController.Instance.EventCheck();
             return;
         }
+
+        
+        if (EventController.Instance.CurrentEvent.isJobEvent)
+        {
+            EventController.Instance.possibility += percentage;
+        }
+        else
+        {
+            for (int i = 0; i < affectCountList.Count; i++)
+            {
+                PersonaController.Instance.personaAmountList[i] += affectCountList[i];
+            }
+            PersonaController.Instance.ChangeAmount();
+            CurrencyController.Instance.CostMoney(costMoney);
+            MainController.Instance.AmountChanged(affectCountList, costMoney);
+        }
+        EventController.Instance.isAllShown = false;
         EventController.Instance.StartCoroutine(EventController.Instance.ShowText(eventCallUp));
         EventController.Instance.ClearChoiceButtons();
 
-        for (int i = 0; i < affectCountList.Count; i++)
-        {
-            PersonaController.Instance.personaAmountList[i] += affectCountList[i];
-        }
-        PersonaController.Instance.ChangeAmount();
-        CurrencyController.Instance.CostMoney(costMoney);
-        MainController.Instance.AmountChanged(affectCountList, costMoney);
-        EventController.Instance.isAllShown = false;
     }
 }

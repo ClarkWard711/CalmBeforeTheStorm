@@ -23,6 +23,9 @@ public class Event : ScriptableObject
     public ChoiceConfig eventChoices;
     public TextAsset textFile;
 
+    public bool isJobEvent;
+    public float possibility = 0.5f;
+    public int jobID = -1;
 
     public void OnValidate()
     {

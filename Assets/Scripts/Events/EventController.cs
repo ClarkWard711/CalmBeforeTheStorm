@@ -24,6 +24,9 @@ public class EventController : MonoBehaviour
 
     public int Time = 0;
 
+    public float possibility = 0.5f;
+    public List<bool> IsHiredList;
+    public int tempID;
     private void Awake()
     {
         if (Instance == null)
@@ -33,6 +36,11 @@ public class EventController : MonoBehaviour
         ChoiceButtons = ChoicePanel.GetComponentsInChildren<Button>();
         index = 0;
         StartCoroutine(ShowText(CurrentEvent));
+        IsHiredList.Clear();
+        for (int i = 0; i < 10; i++)
+        {
+            IsHiredList.Add(false);
+        }
     }
 
     private void Update()
@@ -55,7 +63,19 @@ public class EventController : MonoBehaviour
     {
         isTextFinished = false;
         CurrentEvent = currentEvent;
-        if (currentEvent.isInitialEvent)
+
+        if (PanelController.Instance!=null)
+        {
+            PanelController.Instance.OpenCallender();
+        }
+
+        if (currentEvent.isInitialEvent && index == 0 && currentEvent.isJobEvent) 
+        {
+            possibility = currentEvent.possibility;
+            tempID = currentEvent.jobID;
+        }
+
+        if (currentEvent.isInitialEvent && index == 0) 
         {
             Time += currentEvent.timeCost;
         }

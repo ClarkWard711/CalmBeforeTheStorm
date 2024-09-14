@@ -145,17 +145,18 @@ public class MainController : MonoBehaviour
             amountChanged[i] += list[i];
         }
         amountChanged[5] += money;
-    }
 
-    public void DayEnd()
-    {
-        date++;
-        DateController.Instance.Days[date + 3].GetComponentsInChildren<Image>()[1].enabled = true;
         for (int i = 0; i < 5; i++)
         {
             DateController.Instance.Days[date + 3].GetComponent<ChangeInformation>().changes[i] = amountChanged[i];
         }
-        
+    }
+
+    public void DayEnd()
+    {
+        DateController.Instance.Days[date + 3].GetComponentsInChildren<Image>()[1].enabled = true;
+        date++;
+
         //date ui update
         EventController.Instance.Time = 0;
         

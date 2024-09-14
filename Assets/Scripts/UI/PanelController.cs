@@ -2,9 +2,18 @@ using UnityEngine;
 
 public class PanelController : MonoBehaviour
 {
+    public static PanelController Instance;
     public GameObject toDoPanel;
     public GameObject eventPanel;
     public GameObject callenderPanel;
+
+    private void Awake()
+    {
+        if (Instance == null) 
+        {
+            Instance = this;
+        }
+    }
 
     public void OpenToDo()
     {
