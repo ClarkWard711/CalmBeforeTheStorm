@@ -22,6 +22,7 @@ public class MainController : MonoBehaviour
     //public List<Event> EmergencyEventsList;
     public List<int> amountChanged;
     public int date = 11;
+    public Text DateText;
     private void Awake()
     {
         if (Instance == null)
@@ -175,7 +176,7 @@ public class MainController : MonoBehaviour
     {
         DateController.Instance.Days[date + 3].GetComponentsInChildren<Image>()[1].enabled = true;
         date++;
-
+        DateText.text = "July " + date;
         //date ui update
         EventController.Instance.Time = 0;
         

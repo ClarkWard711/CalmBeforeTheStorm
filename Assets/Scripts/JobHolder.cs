@@ -28,13 +28,7 @@ public class JobHolder : MonoBehaviour
                 EventController.Instance.WrongTip.text = null;
                 MainController.Instance.isEvent = false;
                 MainController.Instance.isJob = false;
-                if (MainController.Instance.ChooseEventPanel.transform.childCount > 0)
-                {
-                    for (int i = 0; i < MainController.Instance.ChooseEventPanel.transform.childCount; i++)
-                    {
-                        Destroy(MainController.Instance.ChooseEventPanel.transform.GetChild(i).gameObject);
-                    }
-                }
+                Destroy(this.gameObject);
             }
         }
 
