@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 875e4d29dd6d94452945b71de10f689c, type: 3}
-  m_Name: InitialEvents_church
+  m_Name: InitialEvents_Game-0
   m_EditorClassIdentifier: 
   isInitialEvent: 1
   isEmergency: 0
   Icon: {fileID: 0}
-  eventDescription: Open the chat app
+  eventDescription: Play video game
   eventTextList:
-  - text: '"Want to come to church and relax?"'
+  - text: While you were playing games,
     duration: 0.1
-  - text: You get a call from a friend
+  - text: you performed poorly,
     duration: 0.1
-  - text: You decide
+  - text: and someone started to insult you.
     duration: 0.1
-  appearTime: 1
+  appearTime: 2
   timeCost: 1
-  eventChoices: {fileID: 11400000, guid: df1648317f313b84fa95848cb040d66b, type: 2}
-  textFile: {fileID: 4900000, guid: f500cb58438e2554a897d1c3b368a6ab, type: 3}
+  eventChoices: {fileID: 11400000, guid: 0cb8ca18a1ccc444bafa0387f0afec06, type: 2}
+  textFile: {fileID: 4900000, guid: 63271d93389554e449034a90a2170394, type: 3}
   isJobEvent: 0
   possibility: 0.5
   jobID: -1

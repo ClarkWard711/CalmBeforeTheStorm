@@ -17,16 +17,14 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "Enraged\r"
+  - text: You hold the ring up and ask aloud
     duration: 0.1
-  - text: "you severely beat him until passersby called the police.\r"
-    duration: 0.1
-  - text: You were then taken to the police station and fined.
+  - text: And a woman comes up and thanks you for finding the ring (+100)
     duration: 0.1
   appearTime: 0
   timeCost: 0
   eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
-  textFile: {fileID: 4900000, guid: 00ee7a535674e46a9bb97f9509fe8f8b, type: 3}
+  textFile: {fileID: 4900000, guid: bc32064d1b0efaf4dbd52699e655ed72, type: 3}
   isJobEvent: 0
   possibility: 0.5
   jobID: -1
