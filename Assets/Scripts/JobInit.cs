@@ -54,7 +54,7 @@ public class JobInit : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            if (finishList[i]) 
+            if (EventController.Instance.IsHiredList[1])  
             {
                 var temp = Instantiate(jobPickPrefab, PickPanel.transform);
                 temp.GetComponent<JobHolder>().JobName.text = JobNameList[i];

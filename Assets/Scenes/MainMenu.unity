@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.7200991, g: 1, b: 0.4669811, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -729,6 +729,18 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   StartGame: {fileID: 1756376661}
   QuitGame: {fileID: 1848694338}
+  FrontImage: {fileID: 1530239468}
+  BackImage: {fileID: 1869737970}
+  temp: 1
+  temp2: 0
+  duration: 0.01
+  shiftDuration: 0.005
+  Sprites:
+  - {fileID: 21300000, guid: fb758913d7e2b40a5852c81907c814f6, type: 3}
+  - {fileID: 21300000, guid: f0af62351cff447bdbbfcc7ac941474b, type: 3}
+  - {fileID: 21300000, guid: 8bb165b59a860446a9196834549ff714, type: 3}
+  spriteID: 0
+  startFade: 0
 --- !u!4 &1051111864
 Transform:
   m_ObjectHideFlags: 0

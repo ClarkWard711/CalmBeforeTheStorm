@@ -54,8 +54,7 @@ public class MainController : MonoBehaviour
     }
     private void Start()
     {
-        ChangePeriodIcon(EventController.Instance.Time);
-        StartCoroutine(TimeChange(EventController.Instance.Time));
+        //StartCoroutine(TimeChange(EventController.Instance.Time));
     }
 
     public void LoadEvent(int time)
