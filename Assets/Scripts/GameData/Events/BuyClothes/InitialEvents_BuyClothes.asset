@@ -17,13 +17,16 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: To buy new clothes
   eventTextList:
-  - text: "You went to the mall to pick out clothes for the interview.\r"
+  - text: You went to the mall to pick out clothes for the interview.
     duration: 0.1
-  - text: "While picking out a dress, the attendant recommends one you dislike.\r"
+  - text: While picking out a dress, the attendant recommends one you dislike.
     duration: 0.1
   - text: You decide.
     duration: 0.1
   appearTime: 1
   timeCost: 1
   eventChoices: {fileID: 11400000, guid: 83a3fadd86e9b834fabd60074cc55e7c, type: 2}
-  textFile: {fileID: 4900000, guid: 760396a7aa29fbb43bc0839549ec8215, type: 3}
+  textFile: {fileID: 4900000, guid: f2c9976fc3d913242b641b1b6317d6b9, type: 3}
+  isJobEvent: 0
+  possibility: 0.5
+  jobID: -1

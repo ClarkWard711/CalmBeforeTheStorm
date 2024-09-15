@@ -15,7 +15,7 @@ public class CurrencyController : MonoBehaviour
         {
             Instance = this;
         }
-        CostMoney(-1000);
+        CostMoney(-500);
     }
     private void Update()
     {

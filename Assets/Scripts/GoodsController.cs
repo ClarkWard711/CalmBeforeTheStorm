@@ -27,6 +27,7 @@ public class GoodsController : MonoBehaviour
 
     public void EndButton()
     {
+        haveBought = false;
         MainController.Instance.DayEnd();
         Shop.SetActive(false);
     }
@@ -67,6 +68,7 @@ public class GoodsController : MonoBehaviour
                 break;
         }
         costMoney = Goods[GoodID].GetComponent<GoodButton>().costMoney;
+        CurrencyController.Instance.CostMoney(costMoney);
         for (int i = 0; i < GoodAffectList.Count; i++)
         {
             PersonaController.Instance.personaAmountList[i] += GoodAffectList[i];

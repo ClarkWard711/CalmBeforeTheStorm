@@ -33,6 +33,30 @@ MonoBehaviour:
     m_Address: MainMenu
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4b60677db75d94eb39f10b6c73bc8a80
+    m_Address: NewGameEventsConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fb41f81a2e6a34897bb8e76b4f210813
+    m_Address: EventConfig_GameConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dc3d4c93ee32a4a27b02786cfe426cb6
+    m_Address: AllJobEvent
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 40e503a892e09431b91c11d8709c28f6
+    m_Address: Job
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eb3e7515787394deba413c85e242139a
+    m_Address: JobPick
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4ad39b918e7d1499d831aa0143c6df0b
+    m_Address: Event
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd5fa95c927ad47a5ac728c5bec68871, type: 2}
   m_SchemaSet:

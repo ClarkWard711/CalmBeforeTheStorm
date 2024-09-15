@@ -17,17 +17,17 @@ MonoBehaviour:
   Icon: {fileID: 0}
   eventDescription: 
   eventTextList:
-  - text: "You go up and draw the prize\r"
+  - text: You go up and draw the prize
     duration: 0.1
-  - text: "But you don't get it\r"
+  - text: But you don't get it
     duration: 0.1
-  - text: "You step down and look behind you\r"
+  - text: You step down and look behind you
     duration: 0.1
   - text: You find the hidden organ
     duration: 0.1
   appearTime: 0
   timeCost: 0
-  eventChoices: {fileID: 11400000, guid: 7e791b97f570fd2428358fe8388f7ef1, type: 2}
+  eventChoices: {fileID: 11400000, guid: b594abef48bbfbc44a2baf81f15b748a, type: 2}
   textFile: {fileID: 4900000, guid: 9ec2fa7024535a2428d2caa9d2ec752d, type: 3}
   isJobEvent: 0
   possibility: 0.5

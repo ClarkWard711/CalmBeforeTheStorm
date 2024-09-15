@@ -205,7 +205,7 @@ public class MainController : MonoBehaviour
         {
             if (date == 21)
             {
-                if (!JobInit.Instance.finishList.Exists(t => t = true)) 
+                if (!EventController.Instance.IsHiredList.Exists(t => t = true)) 
                 {
                     End(false);
                 }
@@ -227,7 +227,7 @@ public class MainController : MonoBehaviour
 
     public bool PersonaCheck()
     {
-        if (PersonaController.Instance.personaAmountList.Exists(amount => amount <= 10 || amount >= 90)) 
+        if (PersonaController.Instance.personaAmountList[PersonaController.Instance.PersonaList[0].GetComponent<Persona>().id]<10|| PersonaController.Instance.personaAmountList[PersonaController.Instance.PersonaList[0].GetComponent<Persona>().id] > 90) 
         {
             return false;
         }
@@ -261,6 +261,7 @@ public class MainController : MonoBehaviour
         }
         else
         {
+            TipText.text = null;
             StartCoroutine(EventController.Instance.ShowText(HazardEvent));
         }
     }
@@ -273,7 +274,7 @@ public class MainController : MonoBehaviour
         yield return new WaitUntil(() => isFadeFinish);
         letter.SetActive(true);
         letter.GetComponent<Image>().sprite = letterSprite[1];
-        letter.GetComponent<Text>().text = "When you read this note, I will have already left this world.\nI admit that my life here has been a complete mess.\nI once cut my wrists to escape from it all.\nI have lost my temper over trivial matters and hurt innocent bystanders.\nI have stolen countless times out of greed.\nI have been so picky that I made someone lose their family and happiness.\nI feel that I can no longer face myself honestly.\nSometimes I wonder if I am truly myself.\nPerhaps, I might just be a madman who shouldn’t exist in this world.";
+        letter.GetComponentInChildren<Text>().text = "When you read this note, I will have already left this world.\nI admit that my life here has been a complete mess.\nI once cut my wrists to escape from it all.\nI have lost my temper over trivial matters and hurt innocent bystanders.\nI have stolen countless times out of greed.\nI have been so picky that I made someone lose their family and happiness.\nI feel that I can no longer face myself honestly.\nSometimes I wonder if I am truly myself.\nPerhaps, I might just be a madman who shouldn’t exist in this world.";
     }
 
     public IEnumerator GoodEnd()
@@ -289,7 +290,7 @@ public class MainController : MonoBehaviour
     public IEnumerator ShowBGGuradually()
     {
         isFadeFinish = false;
-        for (float i = 1; i > 0; i -= 0.1f)
+        for (float i = 0; i < 1; i += 0.1f) 
         {
             FinishBG.color = new Color(1, 1, 1, i);
             yield return new WaitForSeconds(0.1f);

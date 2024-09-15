@@ -15,13 +15,13 @@ MonoBehaviour:
   isInitialEvent: 1
   isEmergency: 1
   Icon: {fileID: 0}
-  eventDescription: Go to bath
+  eventDescription: 
   eventTextList:
-  - text: "You pass by a construction site\r"
+  - text: You pass by a construction site
     duration: 0.1
-  - text: "Because you do not see the anti-slip sign erected\r"
+  - text: Because you do not see the anti-slip sign erected
     duration: 0.1
-  - text: "You accidentally fall into the pit with mud and a sprained foot\r"
+  - text: You accidentally fall into the pit with mud and a sprained foot
     duration: 0.1
   - text: You decide
     duration: 0.1

@@ -15,11 +15,11 @@ MonoBehaviour:
   isInitialEvent: 1
   isEmergency: 0
   Icon: {fileID: 0}
-  eventDescription: 
+  eventDescription: Go to the library
   eventTextList:
-  - text: "You arrive at the library to get ready for work\r"
+  - text: You arrive at the library to get ready for work
     duration: 0.1
-  - text: "But there are children crying next to you\r"
+  - text: But there are children crying next to you
     duration: 0.1
   - text: You decide
     duration: 0.1
