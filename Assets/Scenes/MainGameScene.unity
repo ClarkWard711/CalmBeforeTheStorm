@@ -5031,6 +5031,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6b2904e5c7517430ca0833ce6bdc2ee9, type: 3}
   - {fileID: 21300000, guid: 0f5e63c057c414d29ab529ac69947beb, type: 3}
   HazardEvent: {fileID: 11400000, guid: 46171de49f5701746a6b8fb55f8cf6b0, type: 2}
+  MainMenuScene:
+    m_AssetGUID: 5e48489d5f6ab43c0b6dbbe80c379266
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!4 &559695024
 Transform:
   m_ObjectHideFlags: 0
@@ -14288,7 +14293,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1872879941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 559695023}
+        m_TargetAssemblyTypeName: MainController, Assembly-CSharp
+        m_MethodName: BackToMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1872879941
 MonoBehaviour:
   m_ObjectHideFlags: 0

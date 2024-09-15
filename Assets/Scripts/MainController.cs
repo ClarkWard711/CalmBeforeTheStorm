@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
 
 public class MainController : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class MainController : MonoBehaviour
     public GameObject pickText;
     public List<Sprite> letterSprite;
     public Event HazardEvent;
+    public AssetReference MainMenuScene;
     private void Awake()
     {
         if (Instance == null)
@@ -52,9 +54,9 @@ public class MainController : MonoBehaviour
             amountChanged.Add(0);
         }
     }
-    private void Start()
+    public void BackToMain()
     {
-        //StartCoroutine(TimeChange(EventController.Instance.Time));
+        SceneLoader.LoadAddressableScene(MainMenuScene);
     }
 
     public void LoadEvent(int time)
