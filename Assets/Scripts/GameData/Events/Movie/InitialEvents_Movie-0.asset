@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 875e4d29dd6d94452945b71de10f689c, type: 3}
-  m_Name: InitialEvents_church
+  m_Name: InitialEvents_Movie-0
   m_EditorClassIdentifier: 
   isInitialEvent: 1
   isEmergency: 0
   Icon: {fileID: 0}
-  eventDescription: Open the chat app
+  eventDescription: Go watch movie
   eventTextList:
-  - text: '"Want to come to church and relax?"'
+  - text: You go to the cinema to watch a movie.
     duration: 0.1
-  - text: You get a call from a friend
+  - text: and next to you is a couple who occasionally make noise.
     duration: 0.1
-  - text: You decide
+  - text: You decide.
     duration: 0.1
   appearTime: 1
   timeCost: 1
-  eventChoices: {fileID: 11400000, guid: df1648317f313b84fa95848cb040d66b, type: 2}
-  textFile: {fileID: 4900000, guid: f500cb58438e2554a897d1c3b368a6ab, type: 3}
+  eventChoices: {fileID: 11400000, guid: 0154637c8d26b431ca793ef28ffafc64, type: 2}
+  textFile: {fileID: 4900000, guid: ea6b8d0c5d5724e09bd6b8018d9bf829, type: 3}
   isJobEvent: 0
   possibility: 0.5
   jobID: -1

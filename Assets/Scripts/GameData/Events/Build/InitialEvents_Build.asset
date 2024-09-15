@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 875e4d29dd6d94452945b71de10f689c, type: 3}
-  m_Name: InitialEvents_church
+  m_Name: InitialEvents_Build
   m_EditorClassIdentifier: 
   isInitialEvent: 1
-  isEmergency: 0
+  isEmergency: 1
   Icon: {fileID: 0}
-  eventDescription: Open the chat app
+  eventDescription: Go to bath
   eventTextList:
-  - text: '"Want to come to church and relax?"'
+  - text: "You pass by a construction site\r"
     duration: 0.1
-  - text: You get a call from a friend
+  - text: "Because you do not see the anti-slip sign erected\r"
+    duration: 0.1
+  - text: "You accidentally fall into the pit with mud and a sprained foot\r"
     duration: 0.1
   - text: You decide
     duration: 0.1
   appearTime: 1
   timeCost: 1
-  eventChoices: {fileID: 11400000, guid: df1648317f313b84fa95848cb040d66b, type: 2}
-  textFile: {fileID: 4900000, guid: f500cb58438e2554a897d1c3b368a6ab, type: 3}
+  eventChoices: {fileID: 11400000, guid: b9a2f62f031ae864492beb04b1e4c5d5, type: 2}
+  textFile: {fileID: 4900000, guid: 5740964d84332064cba767ce2ad62414, type: 3}
   isJobEvent: 0
   possibility: 0.5
   jobID: -1
