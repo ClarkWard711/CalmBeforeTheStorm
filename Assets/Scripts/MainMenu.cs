@@ -18,46 +18,50 @@ public class MainMenu : MonoBehaviour
     public List<Sprite> Sprites;
     public int spriteID = 0;
     public bool startFade;
+    public bool isEntering = false;
     public void LoadNewGame()
     {
+        isEntering = true;
         SceneLoader.LoadAddressableScene(MainGame);
     }
     public void QuitButton() => Application.Quit();
 
     private void FixedUpdate()
     {
-        if (temp2 <= 1 && !startFade)
+        if (!isEntering)
         {
-            temp2 += shiftDuration;
-        }
-        else if (temp >= 1) 
-        {
-            startFade = true;
-            temp = 1f;
-            if (spriteID == 2)
+            if (temp2 <= 1 && !startFade)
             {
-                spriteID = 0;
+                temp2 += shiftDuration;
             }
-            else
+            else if (temp >= 1)
             {
-                spriteID++;
+                startFade = true;
+                temp = 1f;
+                if (spriteID == 2)
+                {
+                    spriteID = 0;
+                }
+                else
+                {
+                    spriteID++;
+                }
             }
-        }
 
-        if (startFade) 
-        {
-            temp -= duration;
-            
-            BackImage.sprite = Sprites[spriteID];
-            FrontImage.color = new Color(1, 1, 1, temp);
-        }
-        if (temp <= 0 && startFade)   
-        {
-            startFade = false;
-            FrontImage.sprite = Sprites[spriteID];
-            FrontImage.color = new Color(1, 1, 1, 1);
-            temp = 1;
-            temp2 = 0;
-        }
-    }
+            if (startFade)
+            {
+                temp -= duration;
+
+                BackImage.sprite = Sprites[spriteID];
+                FrontImage.color = new Color(1, 1, 1, temp);
+            }
+            if (temp <= 0 && startFade)
+            {
+                startFade = false;
+                FrontImage.sprite = Sprites[spriteID];
+                FrontImage.color = new Color(1, 1, 1, 1);
+                temp = 1;
+                temp2 = 0;
+            }
+        }    }
 }
