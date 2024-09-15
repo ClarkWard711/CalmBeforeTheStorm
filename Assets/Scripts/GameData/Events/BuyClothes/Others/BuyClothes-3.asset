@@ -24,4 +24,7 @@ MonoBehaviour:
   appearTime: 0
   timeCost: 0
   eventChoices: {fileID: 11400000, guid: 20b3802b2b4b748ea8724303bf0b40b4, type: 2}
-  textFile: {fileID: 4900000, guid: 56f4e2a7c8ef36a48afe759822252019, type: 3}
+  textFile: {fileID: 4900000, guid: c9be591898216524abdaa4ccf1048eca, type: 3}
+  isJobEvent: 0
+  possibility: 0.5
+  jobID: -1

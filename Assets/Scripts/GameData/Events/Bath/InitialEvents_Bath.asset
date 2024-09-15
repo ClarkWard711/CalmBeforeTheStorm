@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: InitialEvents_Bath
   m_EditorClassIdentifier: 
   isInitialEvent: 1
-  isEmergency: 1
+  isEmergency: 0
   Icon: {fileID: 0}
-  eventDescription: 
+  eventDescription: Go to bath
   eventTextList:
   - text: "After a hard day's work\r"
     duration: 0.1
