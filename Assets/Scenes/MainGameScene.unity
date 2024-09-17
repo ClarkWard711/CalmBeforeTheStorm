@@ -11303,7 +11303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: {fileID: 1070024497}
   PersonaSprites:
-  - {fileID: 21300000, guid: 18cb7faa720ce443680022816c8f9306, type: 3}
+  - {fileID: 21300000, guid: 85d95e547b2f74234b894b6e10b7833b, type: 3}
   - {fileID: 21300000, guid: 40cc02b4aaa28431bb92286bf6ce7f24, type: 3}
   - {fileID: 21300000, guid: ae71ec09a34d54db2af46e5d44f080ff, type: 3}
   - {fileID: 21300000, guid: 9afb1deed1b7141a098e007b7057b162, type: 3}
