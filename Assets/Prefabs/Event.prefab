@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6637713068950059021}
   - component: {fileID: 2720098475681588188}
+  - component: {fileID: -7570425733152301609}
   m_Layer: 5
   m_Name: Event
   m_TagString: Untagged
@@ -101,6 +102,23 @@ MonoBehaviour:
   JobAvatar: {fileID: 0}
   AcceptButton: {fileID: 6930644576533298923}
   JobOREvent: 0
+--- !u!114 &-7570425733152301609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637713068950059020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ffc552b304c694d8b9a2b1d75165cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 6930644576533298923}
+  audioSource: {fileID: 7428023354373306822, guid: 5c147e3d16f103b49b8fabb7e3101cf2, type: 3}
+  clickSound: {fileID: 8300000, guid: 6908c580cb38baa47b650739f5bade69, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 6908c580cb38baa47b650739f5bade69, type: 3}
+  audioPlayerPrefab: {fileID: 6081557504472160615, guid: 5c147e3d16f103b49b8fabb7e3101cf2, type: 3}
 --- !u!1 &6637713069128084367
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +291,7 @@ GameObject:
   - component: {fileID: 6637713069425825533}
   - component: {fileID: 6637713069425825532}
   - component: {fileID: 6930644576533298923}
+  - component: {fileID: 8991572569276917961}
   m_Layer: 5
   m_Name: AcceptPanel
   m_TagString: Untagged
@@ -395,6 +414,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8991572569276917961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637713069425825522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ffc552b304c694d8b9a2b1d75165cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 6930644576533298923}
+  audioSource: {fileID: 7428023354373306822, guid: 5c147e3d16f103b49b8fabb7e3101cf2, type: 3}
+  clickSound: {fileID: 8300000, guid: 6908c580cb38baa47b650739f5bade69, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 6908c580cb38baa47b650739f5bade69, type: 3}
+  audioPlayerPrefab: {fileID: 6081557504472160615, guid: 5c147e3d16f103b49b8fabb7e3101cf2, type: 3}
 --- !u!1 &6637713070036381760
 GameObject:
   m_ObjectHideFlags: 0

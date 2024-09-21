@@ -6,8 +6,7 @@ public class ButtonSound : MonoBehaviour
     public Button button;  // 你需要关联的按钮
     public AudioSource audioSource;  // 播放音效的AudioSource
     public AudioClip clickSound;  // 点击时播放的音效
-    public AudioClip buttonClickSound; // 按钮点击音效
-    public GameObject audioPlayerPrefab;
+
 
     void Start()
     {
