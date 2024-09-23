@@ -476,7 +476,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1846461890676537815}
   - component: {fileID: 8540298694548946911}
-  - component: {fileID: 2992427649099696208}
   m_Layer: 5
   m_Name: Job
   m_TagString: Untagged
@@ -523,20 +522,3 @@ MonoBehaviour:
   JobAvatar: {fileID: 1846461890537086070}
   AcceptButton: {fileID: 6200713354147137699}
   JobOREvent: 1
---- !u!114 &2992427649099696208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846461890676537814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96ffc552b304c694d8b9a2b1d75165cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  audioSource: {fileID: 0}
-  clickSound: {fileID: 0}
-  buttonClickSound: {fileID: 0}
-  audioPlayerPrefab: {fileID: 0}
